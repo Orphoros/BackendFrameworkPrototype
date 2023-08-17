@@ -1,0 +1,488 @@
+{
+    "info": {
+        "name": "AAD-Q1-Hotel",
+        "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+        "description": ""
+    },
+    "item": [
+        {
+            "name": "Roomstatus",
+            "request": {
+                "method": "GET",
+                "url": {
+                    "raw": "http://localhost:8080/api/v1/rooms/status?period=604800",
+                    "query": [
+                        {
+                            "key": "period",
+                            "value": "604800"
+                        }
+                    ],
+                    "variable": [],
+                    "path": [
+                        "api",
+                        "v1",
+                        "rooms",
+                        "status"
+                    ],
+                    "protocol": "http",
+                    "host": [
+                        "localhost"
+                    ],
+                    "port": "8080"
+                },
+                "auth": {
+                    "type": "bearer",
+                    "bearer": [
+                        {
+                            "key": "token",
+                            "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJVc2VySUQiOiJjNDllZmRlYS0xMzg0LTQyMTktYjRmNC1lMDE5NDk0Y2I4YWMiLCJleHAiOjE2NzgxOTIxNTN9.ZhX5puzup0wVgu8GkO6jdRKPjXhn-7OXAmtqF93DG_4",
+                            "type": "string"
+                        }
+                    ]
+                }
+            }
+        },
+        {
+            "name": "Users",
+            "request": {
+                "method": "GET",
+                "url": {
+                    "raw": "http://localhost:8080/api/v1/users",
+                    "path": [
+                        "api",
+                        "v1",
+                        "users"
+                    ],
+                    "protocol": "http",
+                    "host": [
+                        "localhost"
+                    ],
+                    "port": "8080"
+                }
+            }
+        },
+        {
+            "name": "Room",
+            "request": {
+                "method": "GET",
+                "url": {
+                    "raw": "http://localhost:8080/api/v1/rooms/:room-number",
+                    "query": [],
+                    "variable": [
+                        {
+                            "key": "room-number",
+                            "value": "3"
+                        }
+                    ],
+                    "path": [
+                        "api",
+                        "v1",
+                        "rooms",
+                        ":room-number"
+                    ],
+                    "protocol": "http",
+                    "host": [
+                        "localhost"
+                    ],
+                    "port": "8080"
+                }
+            }
+        },
+        {
+            "name": "Reservation",
+            "request": {
+                "method": "PATCH",
+                "url": {
+                    "raw": "http://localhost:8080/api/v1/reservations/:reservation-id",
+                    "query": [],
+                    "variable": [
+                        {
+                            "key": "reservation-id",
+                            "value": "88dd25bc-1534-4236-b870-b9f1ec847d1b"
+                        }
+                    ],
+                    "path": [
+                        "api",
+                        "v1",
+                        "reservations",
+                        ":reservation-id"
+                    ],
+                    "protocol": "http",
+                    "host": [
+                        "localhost"
+                    ],
+                    "port": "8080"
+                },
+                "body": {
+                    "mode": "raw",
+                    "options": {
+                        "raw": {
+                            "language": "json"
+                        }
+                    },
+                    "raw": "{\n  \"RoomNumber\": 4\n}"
+                },
+                "auth": {
+                    "type": "bearer",
+                    "bearer": [
+                        {
+                            "key": "token",
+                            "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJVc2VySUQiOiI1ZmU0YzMxOC00ZGY5LTRhZGYtYTZjYS0yNDAzZjQzMWU5ZjIiLCJleHAiOjE2NzgxMTMwNjl9.5S2gkn4oNXOheanQuPJEh4lhROR4TucVr7pkexsosCk",
+                            "type": "string"
+                        }
+                    ]
+                }
+            }
+        },
+        {
+            "name": "User",
+            "request": {
+                "method": "PATCH",
+                "url": {
+                    "raw": "http://localhost:8080/api/v1/users/:user-id",
+                    "query": [],
+                    "variable": [
+                        {
+                            "key": "user-id",
+                            "value": "ae7b708b-4cd4-40ef-a651-a276834b05f0"
+                        }
+                    ],
+                    "path": [
+                        "api",
+                        "v1",
+                        "users",
+                        ":user-id"
+                    ],
+                    "protocol": "http",
+                    "host": [
+                        "localhost"
+                    ],
+                    "port": "8080"
+                },
+                "body": {
+                    "mode": "raw",
+                    "options": {
+                        "raw": {
+                            "language": "json"
+                        }
+                    },
+                    "raw": "{\n  \"name\": \"Jacky\",\n  \"email\": \"j@test.com\"\n}"
+                },
+                "auth": {
+                    "type": "bearer",
+                    "bearer": [
+                        {
+                            "key": "token",
+                            "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJVc2VySUQiOiJhZTdiNzA4Yi00Y2Q0LTQwZWYtYTY1MS1hMjc2ODM0YjA1ZjAiLCJleHAiOjE2NzgxODUwNjJ9.oShzDERL0I59eng94QHMQAxt83SG3grEdxW6sWDlIZI",
+                            "type": "string"
+                        }
+                    ]
+                }
+            }
+        },
+        {
+            "name": "User",
+            "request": {
+                "method": "DELETE",
+                "url": {
+                    "raw": "http://localhost:8080/api/v1/users/:user-id",
+                    "query": [],
+                    "variable": [
+                        {
+                            "key": "user-id",
+                            "value": "ae7b708b-4cd4-40ef-a651-a276834b05f0"
+                        }
+                    ],
+                    "path": [
+                        "api",
+                        "v1",
+                        "users",
+                        ":user-id"
+                    ],
+                    "protocol": "http",
+                    "host": [
+                        "localhost"
+                    ],
+                    "port": "8080"
+                },
+                "auth": {
+                    "type": "bearer",
+                    "bearer": [
+                        {
+                            "key": "token",
+                            "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJVc2VySUQiOiJhZTdiNzA4Yi00Y2Q0LTQwZWYtYTY1MS1hMjc2ODM0YjA1ZjAiLCJleHAiOjE2NzgxODUyOTB9.N56MWuSb_xpP6CSooXiUWkFHoAXY3ENBCkM9LEhzG4I",
+                            "type": "string"
+                        }
+                    ]
+                }
+            }
+        },
+        {
+            "name": "Rooms",
+            "request": {
+                "method": "GET",
+                "url": {
+                    "raw": "http://localhost:8080/api/v1/rooms?free=1678320000",
+                    "query": [
+                        {
+                            "key": "free",
+                            "value": "1678320000"
+                        }
+                    ],
+                    "variable": [],
+                    "path": [
+                        "api",
+                        "v1",
+                        "rooms"
+                    ],
+                    "protocol": "http",
+                    "host": [
+                        "localhost"
+                    ],
+                    "port": "8080"
+                }
+            }
+        },
+        {
+            "name": "Login",
+            "request": {
+                "method": "POST",
+                "url": {
+                    "raw": "http://localhost:8080/api/v1/login",
+                    "path": [
+                        "api",
+                        "v1",
+                        "login"
+                    ],
+                    "protocol": "http",
+                    "host": [
+                        "localhost"
+                    ],
+                    "port": "8080"
+                },
+                "body": {
+                    "mode": "raw",
+                    "options": {
+                        "raw": {
+                            "language": "json"
+                        }
+                    },
+                    "raw": "{\n  \"email\": \"bob@test.com\",\n  \"password\": \"12345\"\n}"
+                }
+            }
+        },
+        {
+            "name": "User",
+            "request": {
+                "method": "GET",
+                "url": {
+                    "raw": "http://localhost:8080/api/v1/users/:user-id",
+                    "query": [],
+                    "variable": [
+                        {
+                            "key": "user-id",
+                            "value": "c49efdea-1384-4219-b4f4-e019494cb8ac"
+                        }
+                    ],
+                    "path": [
+                        "api",
+                        "v1",
+                        "users",
+                        ":user-id"
+                    ],
+                    "protocol": "http",
+                    "host": [
+                        "localhost"
+                    ],
+                    "port": "8080"
+                }
+            }
+        },
+        {
+            "name": "User",
+            "request": {
+                "method": "POST",
+                "url": {
+                    "raw": "http://localhost:8080/api/v1/users",
+                    "path": [
+                        "api",
+                        "v1",
+                        "users"
+                    ],
+                    "protocol": "http",
+                    "host": [
+                        "localhost"
+                    ],
+                    "port": "8080"
+                },
+                "body": {
+                    "mode": "raw",
+                    "options": {
+                        "raw": {
+                            "language": "json"
+                        }
+                    },
+                    "raw": "{\n  \"name\": \"James\",\n  \"email\": \"james@test.com\",\n  \"password\": \"12345\"\n}"
+                }
+            }
+        },
+        {
+            "name": "Reservation",
+            "request": {
+                "method": "POST",
+                "url": {
+                    "raw": "http://localhost:8080/api/v1/reservations",
+                    "path": [
+                        "api",
+                        "v1",
+                        "reservations"
+                    ],
+                    "protocol": "http",
+                    "host": [
+                        "localhost"
+                    ],
+                    "port": "8080"
+                },
+                "body": {
+                    "mode": "raw",
+                    "options": {
+                        "raw": {
+                            "language": "json"
+                        }
+                    },
+                    "raw": "{\n  \"Date\": \"2023-03-10\",\n  \"RoomNumber\": 2\n}"
+                },
+                "auth": {
+                    "type": "bearer",
+                    "bearer": [
+                        {
+                            "key": "token",
+                            "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJVc2VySUQiOiJjNDllZmRlYS0xMzg0LTQyMTktYjRmNC1lMDE5NDk0Y2I4YWMiLCJleHAiOjE2NzgxOTA2MDB9.plc-h_aOEnHQH5DD1puv_i74dsMlIdXVipTUhCoH9qQ",
+                            "type": "string"
+                        }
+                    ]
+                }
+            }
+        },
+        {
+            "name": "Reservation",
+            "request": {
+                "method": "GET",
+                "url": {
+                    "raw": "http://localhost:8080/api/v1/reservations/:reservation-id",
+                    "query": [],
+                    "variable": [
+                        {
+                            "key": "reservation-id",
+                            "value": "55fa048c-aba0-4502-9885-211777b63a01"
+                        }
+                    ],
+                    "path": [
+                        "api",
+                        "v1",
+                        "reservations",
+                        ":reservation-id"
+                    ],
+                    "protocol": "http",
+                    "host": [
+                        "localhost"
+                    ],
+                    "port": "8080"
+                }
+            }
+        },
+        {
+            "name": "Reservations",
+            "request": {
+                "method": "GET",
+                "url": {
+                    "raw": "http://localhost:8080/api/v1/reservations",
+                    "path": [
+                        "api",
+                        "v1",
+                        "reservations"
+                    ],
+                    "protocol": "http",
+                    "host": [
+                        "localhost"
+                    ],
+                    "port": "8080"
+                }
+            }
+        },
+        {
+            "name": "Reservation",
+            "request": {
+                "method": "DELETE",
+                "url": {
+                    "raw": "http://localhost:8080/api/v1/reservations/:reservation-id",
+                    "query": [],
+                    "variable": [
+                        {
+                            "key": "reservation-id",
+                            "value": "55fa048c-aba0-4502-9885-211777b63a01"
+                        }
+                    ],
+                    "path": [
+                        "api",
+                        "v1",
+                        "reservations",
+                        ":reservation-id"
+                    ],
+                    "protocol": "http",
+                    "host": [
+                        "localhost"
+                    ],
+                    "port": "8080"
+                },
+                "auth": {
+                    "type": "bearer",
+                    "bearer": [
+                        {
+                            "key": "token",
+                            "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJVc2VySUQiOiJjNDllZmRlYS0xMzg0LTQyMTktYjRmNC1lMDE5NDk0Y2I4YWMiLCJleHAiOjE2NzgxOTA2MDB9.plc-h_aOEnHQH5DD1puv_i74dsMlIdXVipTUhCoH9qQ",
+                            "type": "string"
+                        }
+                    ]
+                }
+            }
+        },
+        {
+            "name": "Roomstatus",
+            "request": {
+                "method": "GET",
+                "url": {
+                    "raw": "http://localhost:8080/api/v1/rooms/status?period=604800",
+                    "query": [
+                        {
+                            "key": "period",
+                            "value": "604800"
+                        }
+                    ],
+                    "variable": [],
+                    "path": [
+                        "api",
+                        "v1",
+                        "rooms",
+                        "status"
+                    ],
+                    "protocol": "http",
+                    "host": [
+                        "localhost"
+                    ],
+                    "port": "8080"
+                },
+                "auth": {
+                    "type": "bearer",
+                    "bearer": [
+                        {
+                            "key": "token",
+                            "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJVc2VySUQiOiJjNDllZmRlYS0xMzg0LTQyMTktYjRmNC1lMDE5NDk0Y2I4YWMiLCJleHAiOjE2NzgxOTIxNTN9.ZhX5puzup0wVgu8GkO6jdRKPjXhn-7OXAmtqF93DG_4",
+                            "type": "string"
+                        }
+                    ]
+                }
+            }
+        }
+    ]
+}
